@@ -22,5 +22,5 @@ var encode = module.exports = function encode(buffer) {
     ].join(""));
   }
 
-  return bits.join("-");
+  return bits.join("_");
 };

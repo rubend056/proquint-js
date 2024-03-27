@@ -8,7 +8,7 @@ var consonants = {
 var vowels = {a: 0, i: 1, o: 2, u: 3};
 
 var decode = module.exports = function decode(str) {
-  var bits = str.split("-"),
+  var bits = str.split("_"),
       buffer = new Buffer(bits.length * 2);
 
   for (var i=0, len=bits.length; i<len; i++) {
