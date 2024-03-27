@@ -1,11 +1,14 @@
 var consonants = "bdfghjklmnprstvz".split(""),
     vowels     = "aiou".split("");
 
+/**
+ * Encodes a Uint16Array into string
+ */
 var encode = module.exports = function encode(buffer) {
   var bits = [];
 
-  for (var i=0;i<buffer.length/2;++i) {
-    var n = buffer.readUInt16BE(i * 2);
+  for (var i=0;i<buffer.length;++i) {
+    var n = buffer[i];
 
     var c1 = n         & 0x0f,
         v1 = (n >> 4)  & 0x03,
