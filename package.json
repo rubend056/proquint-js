@@ -1,6 +1,6 @@
 {
   "name": "proquint",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Identifiers that are readable, spellable, and pronounceable",
   "main": "index.js",
   "directories": {

@@ -10,11 +10,11 @@ var encode = module.exports = function encode(buffer) {
   for (var i=0;i<buffer.length;++i) {
     var n = buffer[i];
 
-    var c1 = n         & 0x0f,
-        v1 = (n >> 4)  & 0x03,
+    var c1 = (n >> 12) & 0x0f,
+        v1 = (n >> 10) & 0x03,
         c2 = (n >> 6)  & 0x0f,
-        v2 = (n >> 10) & 0x03,
-        c3 = (n >> 12) & 0x0f;
+        v2 = (n >> 4)  & 0x03,
+        c3 =  n        & 0x0f;
 
     bits.push([
       consonants[c1],
